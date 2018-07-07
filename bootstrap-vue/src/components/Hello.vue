@@ -2,7 +2,7 @@
   <div class="table">
     <h1>{{ msg }}</h1>
     <table></table>
-    <h1>Exemplo de Manipulação de Array e Objetos em JavaScript</h1>
+    <h1></h1>
   </div>
 </template>
 
