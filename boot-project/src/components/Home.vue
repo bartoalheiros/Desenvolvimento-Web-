@@ -17,15 +17,17 @@
       </div>
     </form>
     <div class="well2">
-      <select>
-        <option value="tecnico">Técnico</option>
-        <option value="gerente">Gerente</option>
-        <option value="recep">Recepção</option>
-      </select><br><br>
-      <input type="submit" name="entrar" data-toggle="button" class="btn btn-dark btn-warning" value="Entrar" style="background-color: #127a38;">
+      <select id="comboPrivilegio" class="custom-select custom-select-sm">
+        <option value="1">Cliente</option>
+        <option value="2">Técnico</option>
+        <option value="3">Recepção</option>
+      </select>
+      <label id="legenda" for="comboPrivilegio">*Selecione um tipo de conta</label><br><br>
+    </div>
+    <div class="well3">
+      <input type="submit" name="entrar" data-toggle="button" class="btn btn-dark btn-warning" value="Entrar" style="background-color: #127a38;"></div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -78,20 +80,31 @@ a {
  position: absolute;
  top: 60%;
  right: 50%;
- transform: translate(64%, 52%);
+ transform: translate(64%, 70%);
 }
 
 .well2 {
  position: absolute;
  top: 70%;
  right: 50%;
- transform: translate(10%, 52%);
+ transform: translate(35%, 60%);
 }
 
 .well3 {
  position: absolute;
  top: 70%;
  right: 50%;
- transform: translate(10%, 52%);
+ transform: translate(-5%, 310%);
+}
+
+#comboPrivilegio {
+  height: 35px;
+  width: 120px;
+  font-size: 15px;  
+}
+
+#legenda {
+  font-size: 15px;
+  width: 250px;
 }
 </style>
