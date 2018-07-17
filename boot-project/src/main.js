@@ -4,12 +4,14 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import App from './App'
 import router from './router'
+import Vuelidate from 'vuelidate'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'jquery/dist/jquery.min.js'
 import 'expose-loader?$!expose-loader?jQuery!jquery'
 
 Vue.use(BootstrapVue)
+Vue.use(Vuelidate)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

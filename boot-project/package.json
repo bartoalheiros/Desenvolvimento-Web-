@@ -16,9 +16,12 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "latest",
+    "feather-icons": "^4.7.3",
     "jquery": "^3.3.1",
+    "popper": "^1.0.1",
     "popper.js": "^1.12.9",
     "vue": "^2.5.2",
+    "vue-feather-icon": "^1.2.0",
     "vue-router": "^3.0.1",
     "vuelidate": "^0.7.4"
   },
