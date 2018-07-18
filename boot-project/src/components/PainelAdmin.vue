@@ -8,19 +8,19 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#/content">
+              <a class="nav-link active" href="#/content" v-on:click="optnClicked=true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 Painel de Controle <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dashboardAdmin/chamado.html" target="_self">
+              <a class="nav-link" href="#/chamados" target="_self">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                 Chamados
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#/os">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                 Ordens de Serviço
               </a>
@@ -91,8 +91,12 @@
           </ul>
         </div>
       </nav>
-      <<painel-admin-content></painel-admin-content>
-      <router-view></router-view>
+      <div id="painel" v-if="optnClicked==false">
+        <painel-admin-content></painel-admin-content>
+      </div>
+      <div v-else>
+        <router-view></router-view>
+      </div>  
   </div>
 </div>
   </div>
@@ -102,7 +106,6 @@
 
 <script>
 
-import feather from 'feather-icons'
 import PainelAdminContent from './PainelAdminContent'
 
 export default {
@@ -111,12 +114,7 @@ export default {
     return {
       msg: 'Teste',
       showDismissibleAlert: false,
-      clicked: false
-    }
-  },
-  computed: {
-    iconSvg: function (name) {
-      return feather.toSvg(name)
+      optnClicked: false
     }
   },
   components: {
@@ -142,7 +140,8 @@ li {
 }
 
 a {
-  color: #42b983;
+  /*color: #42b983;*/
+  color: gray;
 }
 
 .nav-item {

@@ -5,6 +5,8 @@ import Sobre from '@/components/Sobre'
 import Cadastro from '@/components/Cadastro'
 import PainelAdmin from '@/components/PainelAdmin'
 import PainelAdminContent from '@/components/PainelAdminContent'
+import ChamadosAtend from '@/components/ChamadosAtend'
+import OS from '@/components/OS'
 
 Vue.use(Router)
 Vue.use(Sobre)
@@ -12,6 +14,8 @@ Vue.use(Cadastro)
 Vue.use(Login)
 Vue.use(PainelAdmin)
 Vue.use(PainelAdminContent)
+Vue.use(ChamadosAtend)
+Vue.use(OS)
 
 export default new Router({
   routes: [
@@ -37,6 +41,15 @@ export default new Router({
         path: '/content',
         name: 'PainelAdminContent',
         component: PainelAdminContent
+      },
+      {
+        path: '/chamados',
+        name: 'ChamadosAtend',
+        component: ChamadosAtend},
+      {
+        path: '/os',
+        name: 'OS',
+        component: OS
       }]
     }
   ]

@@ -1,3 +1,43 @@
+<script>
+  import { Line } from 'vue-chartjs'
+
+  export default {
+    name: 'chamadosAtend',
+    components: {
+      'chart': Line
+    },
+    extends: Line,
+    mounted () {
+      this.renderChart({
+        type: 'line',
+        data: {
+          labels: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false
+          }
+        }
+      })
+    }
+  }
+</script>  
+
 <template>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -14,7 +54,7 @@
           </div>
         </div>
 
-        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"><chart></chart></canvas>
 
         <!--<h2>Chamados</h2>-->
         <div class="table-responsive">
