@@ -1,43 +1,26 @@
 <template>
   <b-container><br>
-    <img src="../assets/logo.png"><br>
     
-    <b-form>
-      <label for="login"></label>
-      <b-row id="user">
-        <b-col sm="3">
-          <label :for="txtLogin"></label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input :id="txtLogin" :type="text" placeholder="Usuário" v-model="user.login"></b-form-input>
-        </b-col>
-      </b-row><br><br>
-      
-      <b-row id="password">
-        <b-col sm="3">
-          <label :for="passwordField"></label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input :id="passwordField" :type="password" placeholder="Senha" v-model="user.password"></b-form-input>
-        </b-col>
-      </b-row>
-
-      <div id="combo">
-        <b-form-select v-model="selected" :options="options" class="mb-3" size="sm">
-        </b-form-select>
-      </div>
-      <label id="legenda" for="comboPrivilegio">*Selecione um tipo de conta</label><br><br>
-    </div>
+    
+    <b-form id="user">
+      <img id="imgLogin" src="../assets/logo.png"><br>
+      <b-form-group>
+        <b-form-input :id="txtLogin" :type="text" placeholder="Usuário" v-model="user.login" style="margin-bottom: 5px"></b-form-input>
+        <b-form-input :id="passwordField" :type="password" placeholder="Senha" v-model="user.password"></b-form-input>
+        <label id="legenda" for="comboConta">*Selecione um tipo de conta</label>
+        <b-form-select id="comboConta" name="comboConta" v-model="selected" :options="options" size="sm"/><br>
+        <b-button id="loginBttn" @click="validarLogin">Entrar</b-button>
+      </b-form-group><br><br>
+    </b-form>
+ 
+    
     <div id="loginBttn">
-     <b-button @click="validarLogin" style="background-color: #127a38;">Entrar</b-button>
+     
      <!--<b-button :pressed="false" style="background-color: #127a38;" @click="testeMetodo">Entrar</b-button>-->
      <p id="demo"></p>
    </div>
- </b-form>
- <br><br><br><br>
- <div id="quemSomos" ref="quemSomos">
-  <p>Teste</p>
-</div>
+ 
+
 </b-container>
 </template>
 

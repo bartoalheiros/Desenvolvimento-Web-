@@ -31,9 +31,9 @@ a {
 
 #user {
  position: absolute;
- top: 60%;
+ top: -300%;
  right: 56%;
- transform: translate(59%, 60%);
+ transform: translate(89%, 40%);
 }
 
 #password {
@@ -43,27 +43,23 @@ a {
  transform: translate(35%, 60%);
 }
 
-#combo {
- position: absolute;
- top: 80%;
- right: 45%;
- transform: translate(7%, 70%);
- font-size: 20px;
- border-bottom: 20px; 
+#comboConta {
+  width: 130px; 
+  margin-top: 5px; 
+  margin-bottom: 20px;
 }
 
 #loginBttn {
- position: absolute;
- top: 70%;
- right: 50%;
- transform: translate(65%, 400%);
+ transform: translate(5%, 100%);
+ width: 100px;
+ background-color: #127a38;
 }
 
 #legenda {
   position: absolute;
   font-size: 15px;
   width: 250px;
-  transform: translate(-45%, 610%);
+  transform: translate(-25%, 210%);
 }
 
 #quemSomos {
