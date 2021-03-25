@@ -36,9 +36,9 @@ export default {
       showDismissibleAlert: false,
       selected: 'a',
       options: [
-      { value: 'a', text: 'Cliente' },
-      { value: 'b', text: 'Técnico' },
-      { value: 'c', text: 'Recepção' }
+        { value: 'a', text: 'Cliente' },
+        { value: 'b', text: 'Técnico' },
+        { value: 'c', text: 'Recepção'}
       ],
       html: '<a href="#">Link</a>',
       registros: [{
